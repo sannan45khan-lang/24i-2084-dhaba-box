@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useShop } from '../context/ShopContext.jsx';
 import { CATEGORIES } from '../data/menu.js';
@@ -32,10 +33,26 @@ export default function MenuPage() {
     setSearchParams({}, { replace: true });
   }
 
+  // The search box keeps its own text so every key shows instantly.
+  // (The URL updates a moment later, so reading the box straight from the URL
+  // could drop letters when typing fast.)
+  const [searchText, setSearchText] = useState(search);
+
+  // When the URL changes from somewhere else (Back button, Clear, a suggestion),
+  // copy the new search into the box.
+  useEffect(() => {
+    setSearchText(search);
+  }, [search]);
+
+  function handleSearchChange(event) {
+    setSearchText(event.target.value);
+    updateParam('q', event.target.value, '');
+  }
+
   if (status !== 'ready') return <DataStatus />;
 
   // 1. search  2. filter  3. sort  - all work together
-  const text = search.trim().toLowerCase();
+  const text = searchText.trim().toLowerCase();
   const filtered = items.filter((item) => {
     const matchesSearch =
       item.name.toLowerCase().includes(text) ||
@@ -67,8 +84,8 @@ export default function MenuPage() {
             id="search"
             type="search"
             placeholder="e.g. biryani, daal, wrap"
-            value={search}
-            onChange={(event) => updateParam('q', event.target.value, '')}
+            value={searchText}
+            onChange={handleSearchChange}
           />
         </div>
         <div className="field">
@@ -101,7 +118,7 @@ export default function MenuPage() {
         </div>
       ) : sorted.length === 0 ? (
         <div className="empty-state" role="status">
-          <h2>No dishes match "{search || category}"</h2>
+          <h2>No dishes match "{searchText || category}"</h2>
           <p>Try a different word or category, or clear the search to see all {items.length} dishes.</p>
           <button type="button" className="btn primary" onClick={clearFilters}>
             Clear search and filters
