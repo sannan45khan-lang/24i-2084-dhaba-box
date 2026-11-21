@@ -1,7 +1,7 @@
 # Dhaba Box: Student Meal Ordering (CS4032 Assignment 02)
 
-**Student:** Sannan Khan · 24I-2084 · _Section_
-**GitHub:** _add repository link_ · **Live site:** _add deployment link_
+**Student:** Sannan Khan · 24I-2084 · Section CY-A
+**GitHub:** https://github.com/sannan45khan-lang/24i-2084-dhaba-box · **Live site:** https://24i-2084-dhaba-box.vercel.app
 
 ## Description
 Dhaba Box is a fictional desi food kitchen in H-11, Islamabad. It delivers affordable meals to university students in nearby sectors. Students can browse the menu, search and filter it, open a dish, build a cart, enter a delivery address, check the calculated total and place a **simulated** order.
