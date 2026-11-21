@@ -16,7 +16,7 @@ export default function DemoPanel() {
       <p className="muted">These simulate problems so the error and recovery screens can be checked.</p>
       <label className="checkbox">
         <input type="checkbox" name="failLoading" checked={demo.failLoading} onChange={handleChange} />
-        Simulate loading failure
+        Simulate loading failure (Retry fixes it)
       </label>
       <label className="checkbox">
         <input type="checkbox" name="emptyMenu" checked={demo.emptyMenu} onChange={handleChange} />

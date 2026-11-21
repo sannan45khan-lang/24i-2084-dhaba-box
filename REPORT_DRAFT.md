@@ -1,17 +1,15 @@
 # CS4032 Assignment 02 Report: Dhaba Box
-> Draft. Fill in the _italic_ parts, add screenshots where it says 📷, then export to PDF.
-> This file is a working draft. Don't submit it as-is.
 
 ## 1. Student and project details
 | | |
 |---|---|
 | Name | Sannan Khan |
 | Roll number | 24I-2084 |
-| Section | _X_ |
+| Section | CY-A |
 | Business name | Dhaba Box |
-| Repository | _https://github.com/..._ |
-| Deployment | _https://....vercel.app_ |
-| Final commit hash | _run `git rev-parse HEAD`_ |
+| Repository | https://github.com/sannan45khan-lang/24i-2084-dhaba-box |
+| Deployment | https://24i-2084-dhaba-box.vercel.app |
+| Final commit hash | d81d9d1b3ef3375b1baeb0241fb5dd25b0a0f8b0 |
 
 ## 2. Business profile
 | Element | Detail |

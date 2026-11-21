@@ -18,7 +18,7 @@ export default function DataStatus() {
       <h2>Menu could not be loaded</h2>
       <p>{errorMessage}</p>
       <p className="muted">
-        If you turned on "Simulate loading failure" on the Home page, turn it off first.
+        Check your connection, then press Retry.
       </p>
       <button type="button" className="btn primary" onClick={retry}>
         Retry

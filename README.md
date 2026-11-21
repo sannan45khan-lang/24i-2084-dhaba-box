@@ -45,7 +45,7 @@ Requires Node.js 20 or newer.
 All demo controls are on the **Home page** under "Demo controls".
 | Case | How to reproduce |
 |---|---|
-| Loading failure | Tick "Simulate loading failure" → open Menu → error message. Untick it → press **Retry** |
+| Loading failure | Tick "Simulate loading failure" → open Menu → error message → press **Retry** → data loads (Retry also switches the simulation off) |
 | Empty dataset | Tick "Simulate empty menu" → Menu shows "no dishes listed today" |
 | No search matches | Search `xyz` → "No dishes match" with **Clear** button and suggestions |
 | Invalid URL | Open `/menu/abc` or `/anything` |
